@@ -1,0 +1,14 @@
+language: ruby
+rvm:
+- 2.0.0
+deploy:
+  provider: heroku
+  api_key:
+    secure: HteM0rYjranrNCVJaCRvAbAxwdWoVVFCEVF6xINVE3gG+X1a9AB4OCyEiwb0wzIwuNAT2BJcOfKMzFv2DePCnjItU2fZIxn8O7rmXDWr8wbFaJIAoPR5ph71325bPyGlG/LvSE9/SyHf8eBL7lqW6++pY/rzNm6R9fjwK8vY3vckxWD+KKpU/RJOViv04k+pe/GJPDtQRBTWWX70xHXjGeVkIL1S5w08E0dov3XPUNlU6DdYqCKtZonYoBS3xbd2wfQtMkW19YJggBQb5+m4tBFbUPs2GjuGHM9iVyO1jGIJMNrJvpCymMVe+a/bo/z1lEP1DvzhvSBfH9qbK1DE1EFVUz7XonjbJwlYrFT5Qd89zWyOvj8DU+PZ84nz/SBD+8f13y+B70K68Uxe0B7vTTuvjXwqImnvhpKEA8XnlyGK4lNS3AGslc+Lk0Pu9hqDsDsrtsNdj9liRF/x1kJk+pYPNAUjqdJx/icmbpKE+wWK7xabHLh6ICa3pOHM5EGbdxb/QEIbDWw1q6b+nmYGmONTRJpzl0X8v10HVumzrZ+ETLuVlhF/li3RS0runx4WnkPvY7y/hvbO/Hdv2O6ixf2b569gkFvrThUy6WoHMaS5wJW4cXGYSxN6S/JLZAkj7S5AI7/IBbqhwXpJF4wkint3x0EnlrBFWnPKboHallI=
+  app: afternoon-badlands-8491
+  on:
+    repo: konagayoshi/VCT
+addons:
+postgresql: "9.3"
+before_script:
+- rake db:migrate
