@@ -8,10 +8,11 @@ deploy:
   app: afternoon-badlands-8491
   on:
     repo: konagayoshi/VCT
+    branch: master
 addons:
     postgresql: "9.3"
 before_script:
-    - psql -c 'create database travis_ci_test;' -U postgres
+    - psql -c 'create database VCT_test;' -U postgres
     - cp config/database.yml.travis config/database.yml
     - rake db:migrate RAILS_ENV=test
     
