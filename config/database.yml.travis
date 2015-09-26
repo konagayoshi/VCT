@@ -1,4 +1,4 @@
 test:
-adapter: postgresql
-database: VCT_test
-username: postgres
+    adapter: postgresql
+    database: VCT_test
+    username: postgres
