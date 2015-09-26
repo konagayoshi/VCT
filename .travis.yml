@@ -9,8 +9,8 @@ deploy:
   on:
     repo: konagayoshi/VCT
 addons:
-postgresql: "9.3"
+    postgresql: "9.3"
 before_script:
-- psql -c 'create database VCT_test;' -U postgres
-- cp config/database.yml.travis config/database.yml
-- rake db:migrate RAILS_ENV=test # いらない？
+    - psql -c 'create database VCT_test;' -U postgres
+    - cp config/database.yml.travis config/database.yml
+    - rake db:migrate RAILS_ENV=test # いらない？
